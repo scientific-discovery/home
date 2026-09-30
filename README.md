@@ -4,23 +4,19 @@ Hub page for Nikhil Abhyankar's work on safe LLM agents for open-ended scientifi
 
 | Project | Venue | Project page |
 |---|---|---|
-| LLM-ACES | NeurIPS 2026 | https://scientific-discovery.github.io/llm-aces-project/ |
+| LLM-ACES | NeurIPS 2026 | https://scientific-discovery.github.io/llmaces-project/ |
 | LLM-AutoSciLab | NeurIPS 2026 | https://scientific-discovery.github.io/llm-autoscilab-project/ |
 | LLEMA | ICLR 2026 | https://scientific-discovery.github.io/llema-project/ |
 | LLM-FE | TMLR 2026 | https://scientific-discovery.github.io/llm-fe/ |
 
 ## Publish on GitHub Pages
 
-1. Create a repo named `main_page` in the `scientific-discovery` org and push this folder to it.
-2. In the repo go to Settings → Pages → Deploy from a branch → `main` / root.
-3. The page goes live at https://scientific-discovery.github.io/main_page/
-
-For the shorter https://scientific-discovery.github.io/ URL, name the repo `scientific-discovery.github.io` instead. Then replace `/main_page/` in the `canonical`, `og:url`, `og:image` and `twitter:image` tags at the top of `index.html`.
+This folder is the `home` repo in the `scientific-discovery` org, served from the `main` branch root (Settings → Pages). It is live at https://scientific-discovery.github.io/home/
 
 ## Preview locally
 
 ```bash
-cd main_page && python3 -m http.server 8000
+python3 -m http.server 8000
 ```
 
 Then open http://localhost:8000 (VS Code forwards the port automatically on a remote machine).
