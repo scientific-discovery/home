@@ -153,13 +153,13 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="loop-title">The Discovery Loop</h2>
-        <p class="section-lede">All four projects follow the same loop. An LLM proposes hypotheses within domain constraints, each one is tested against evidence, and the results are written back to memory for the next round. LLM-FE and LLEMA run steps 01, 02 and 04 as an evolutionary search. LLM-ACES and LLM-AutoSciLab add step 03, so the agent also chooses which experiment to run next.</p>
+        <p class="section-lede">All four projects follow the same loop. An LLM proposes candidate hypotheses, each one is tested against evidence, and the results refine its belief for the next round. LLM-FE and LLEMA run steps 01, 02 and 04 as an evolutionary search. LLM-ACES and LLM-AutoSciLab add step 03, so the agent also chooses which experiment to run next.</p>
       </div>
 
       <div class="loop">
         <figure class="loop__diagram">
           <svg viewBox="0 0 480 396" role="img" aria-labelledby="loop-svg-title">
-            <title id="loop-svg-title">The discovery loop: propose, test, experiment, remember, and back to propose.</title>
+            <title id="loop-svg-title">The discovery loop: propose, test, experiment, refine, and back to propose.</title>
             <defs>
               <marker id="loop-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto">
                 <path class="loop-arrowhead" d="M1 1 9 5 1 9Z"/>
@@ -178,7 +178,7 @@
             <text class="loop-label" x="240" y="30" text-anchor="middle">Propose</text>
             <text class="loop-label" x="403" y="205" text-anchor="start">Test</text>
             <text class="loop-label" x="240" y="382" text-anchor="middle">Experiment</text>
-            <text class="loop-label" x="77" y="205" text-anchor="end">Remember</text>
+            <text class="loop-label" x="77" y="205" text-anchor="end">Refine</text>
             <text class="loop-center" x="240" y="200">LLM Agent</text>
             <text class="loop-center-sub" x="240" y="226">hypotheses ⇄ evidence</text>
           </svg>
@@ -187,45 +187,23 @@
         <ol class="steps">
           <li class="step">
             <p class="step__num">01</p>
-            <h3>Propose within constraints</h3>
-            <p>The LLM drafts hypotheses as equations, programs or crystal structures, inside a search space shaped by domain rules and priors.</p>
-            <ul class="uses">
-              <li><b>LLM-ACES</b><span>operator priors</span></li>
-              <li><b>AutoSciLab</b><span>competing mechanisms</span></li>
-              <li><b>LLEMA</b><span>chemistry-informed rules</span></li>
-              <li><b>LLM-FE</b><span>domain-aware programs</span></li>
-            </ul>
+            <h3>Propose candidates</h3>
+            <p>The LLM drafts candidate hypotheses as equations, programs or crystal structures, guided by domain knowledge and priors.</p>
           </li>
           <li class="step">
             <p class="step__num">02</p>
             <h3>Test against evidence</h3>
             <p>Every proposal is executed, fitted and scored on data, simulators or property oracles. Nothing is accepted on the model’s word.</p>
-            <ul class="uses">
-              <li><b>LLM-ACES</b><span>fit and score each ODE</span></li>
-              <li><b>AutoSciLab</b><span>refit on every new result</span></li>
-              <li><b>LLEMA</b><span>surrogate property oracle</span></li>
-              <li><b>LLM-FE</b><span>validation score of a model</span></li>
-            </ul>
           </li>
           <li class="step step--accent">
             <p class="step__num">03</p>
             <h3>Choose the next experiment</h3>
             <p>The agent queries where its competing hypotheses disagree most, so each new observation rules something out.</p>
-            <ul class="uses">
-              <li><b>LLM-ACES</b><span>initial conditions of maximum divergence</span></li>
-              <li><b>AutoSciLab</b><span>queries of maximum disagreement</span></li>
-            </ul>
           </li>
           <li class="step">
             <p class="step__num">04</p>
-            <h3>Remember and calibrate</h3>
-            <p>Successes, failures and confidence checks are written back to memory, steering later rounds away from spurious fits and memorized answers.</p>
-            <ul class="uses">
-              <li><b>LLM-ACES</b><span>best and worst equations</span></li>
-              <li><b>AutoSciLab</b><span>bootstrap confidence gate</span></li>
-              <li><b>LLEMA</b><span>reward and error memories</span></li>
-              <li><b>LLM-FE</b><span>island-based program memory</span></li>
-            </ul>
+            <h3>Refine belief</h3>
+            <p>Successes, failures and confidence checks update the agent’s belief about which hypotheses hold, steering later rounds away from spurious fits and memorized answers.</p>
           </li>
         </ol>
       </div>

@@ -424,24 +424,6 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
   line-height: 1.6;
   color: var(--text-secondary);
 }
-.uses {
-  display: grid;
-  gap: 6px;
-  margin: 0.9rem 0 0;
-  padding: 0.85rem 0 0;
-  list-style: none;
-  border-top: 1px solid var(--border-color);
-}
-.uses li {
-  display: grid;
-  grid-template-columns: 6.8rem minmax(0, 1fr);
-  gap: 10px;
-  align-items: baseline;
-  font-size: 0.87rem;
-  line-height: 1.4;
-  color: var(--text-secondary);
-}
-.uses b { font-size: 0.8rem; font-weight: 600; color: var(--text-primary); }
 
 @media (max-width: 1000px) {
   .loop { grid-template-columns: minmax(0, 1fr); }
