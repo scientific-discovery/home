@@ -202,14 +202,14 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
   min-width: 0;
   text-decoration: none;
 }
-.brand__logo { width: auto; height: 32px; flex: none; }
-.brand__divider { width: 1px; height: 24px; background: var(--border-color); flex: none; }
 .brand__name {
-  font-size: 1rem;
+  overflow: hidden;
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   color: var(--text-primary);
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .nav__links { display: flex; gap: 2px; }
@@ -232,7 +232,7 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
 }
 @media (max-width: 560px) {
   .nav__inner { height: 62px; gap: 10px; }
-  .brand__divider, .brand__name { display: none; }
+  .brand__name { font-size: 1rem; }
   .only-wide { display: none; }
   .only-narrow { display: inline; }
 }
