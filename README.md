@@ -27,8 +27,8 @@ Then open http://localhost:8000 (VS Code forwards the port automatically on a re
 
 ## What to edit where
 
-- Text, links, venues and authors: `index.html`. Each project card is an `<article class="card">` block.
-- Colors, fonts and layout: `static/css/main.css`. Tokens for light and dark mode are at the top.
-- The animated Fig. 1 (Schnackenberg phase portrait), figure viewer, share/QR dialog and theme toggle: `static/js/main.js`.
+- Text, links and venues: `index.html`. Each project card is an `<article class="card">` block.
+- Colors, fonts and layout: `static/css/main.css`. It uses the same Inter font and color tokens as the project pages (`llema-project/static/css/index.css`).
+- Figure viewer and share/QR dialog: `static/js/main.js`.
 - Card figures: `static/images/figs/<project>-1400.webp` (card) and `-2400.webp` (full-size viewer).
 - Link preview image for Slack, LinkedIn and X: `static/images/og-image.png` (1200 × 630).
