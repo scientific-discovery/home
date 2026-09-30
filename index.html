@@ -84,7 +84,7 @@
       <span class="brand__name">Scientific Discovery</span>
     </a>
     <nav class="nav__links" aria-label="Sections">
-      <a href="#loop">The Loop</a>
+      <a href="#process">Process</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
     </nav>
@@ -108,7 +108,7 @@
       <div class="hero__text">
         <p class="eyebrow">Nikhil Abhyankar · Virginia Tech</p>
         <h1 id="hero-title">Building Safe LLM Agents for Open-Ended Scientific Discovery</h1>
-        <p class="lede">Language models can propose hypotheses far faster than any lab can test them. We build agents that ground every proposal in domain knowledge, test it against real evidence, and run the next experiment when the data cannot yet tell competing hypotheses apart.</p>
+        <p class="lede">LLMs possess scientific domain knowledge that can be leveraged to help scientists speed up the discovery process. We build agents that ground every proposal in this knowledge, validate it against real evidence, and run the next experiment when the data cannot yet tell competing hypotheses apart.</p>
         <a class="btn btn--dark" href="#projects">Explore the projects<svg aria-hidden="true"><use href="#i-down"/></svg></a>
       </div>
 
@@ -148,18 +148,18 @@
     </div>
   </section>
 
-  <!-- ============ The discovery loop ============ -->
-  <section class="section section--alt" id="loop" aria-labelledby="loop-title">
+  <!-- ============ The scientific discovery process ============ -->
+  <section class="section section--alt" id="process" aria-labelledby="process-title">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="loop-title">The Discovery Loop</h2>
-        <p class="section-lede">All four projects follow the same loop. An LLM proposes candidate hypotheses, each one is tested against evidence, and the results refine its belief for the next round. LLM-FE and LLEMA run steps 01, 02 and 04 as an evolutionary search. LLM-ACES and LLM-AutoSciLab add step 03, so the agent also chooses which experiment to run next.</p>
+        <h2 id="process-title">The Scientific Discovery Process</h2>
+        <p class="section-lede">All four projects follow the same process. An LLM proposes candidate hypotheses, each one is validated against evidence, and the results refine its belief for the next round. LLM-FE and LLEMA run steps 01, 02 and 04 as an evolutionary search. LLM-ACES and LLM-AutoSciLab add step 03, so the agent also chooses which experiment to run next.</p>
       </div>
 
       <div class="loop">
         <figure class="loop__diagram">
           <svg viewBox="0 0 480 396" role="img" aria-labelledby="loop-svg-title">
-            <title id="loop-svg-title">The discovery loop: propose, test, experiment, refine, and back to propose.</title>
+            <title id="loop-svg-title">The scientific discovery process: propose, validate, experiment, refine, and back to propose.</title>
             <defs>
               <marker id="loop-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto">
                 <path class="loop-arrowhead" d="M1 1 9 5 1 9Z"/>
@@ -176,11 +176,12 @@
             <g class="loop-node loop-node--accent"><circle cx="240" cy="332" r="21"/><text x="240" y="332">03</text></g>
             <g class="loop-node"><circle cx="108" cy="200" r="21"/><text x="108" y="200">04</text></g>
             <text class="loop-label" x="240" y="30" text-anchor="middle">Propose</text>
-            <text class="loop-label" x="403" y="205" text-anchor="start">Test</text>
+            <text class="loop-label" x="403" y="205" text-anchor="start">Validate</text>
             <text class="loop-label" x="240" y="382" text-anchor="middle">Experiment</text>
             <text class="loop-label" x="77" y="205" text-anchor="end">Refine</text>
-            <text class="loop-center" x="240" y="200">LLM Agent</text>
-            <text class="loop-center-sub" x="240" y="226">hypotheses ⇄ evidence</text>
+            <text class="loop-center" x="240" y="186">Open-Ended</text>
+            <text class="loop-center" x="240" y="213">Discovery</text>
+            <text class="loop-center-sub" x="240" y="238">hypotheses ⇄ evidence</text>
           </svg>
         </figure>
 
@@ -192,7 +193,7 @@
           </li>
           <li class="step">
             <p class="step__num">02</p>
-            <h3>Test against evidence</h3>
+            <h3>Validate against evidence</h3>
             <p>Every proposal is executed, fitted and scored on data, simulators or property oracles. Nothing is accepted on the model’s word.</p>
           </li>
           <li class="step step--accent">
@@ -211,12 +212,8 @@
   </section>
 
   <!-- ============ Projects ============ -->
-  <section class="section" id="projects" aria-labelledby="projects-title">
+  <section class="section" id="projects" aria-label="Projects">
     <div class="wrap">
-      <div class="section-head">
-        <h2 id="projects-title">Projects</h2>
-        <p class="section-note">Click a figure to enlarge it.</p>
-      </div>
 
       <div class="cards">
 
